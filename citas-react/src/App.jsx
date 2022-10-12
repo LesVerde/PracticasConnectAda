@@ -1,5 +1,8 @@
 import Header from "./Componentes/header"
 import ListadoPaciente from "./Componentes/ListadoPaciente";
+import Formulario from "./Componentes/formulario";
+import Error from "./Componentes/error";
+import Paciente from "./Componentes/paciente";
 
 function App() {
 
@@ -7,6 +10,9 @@ function App() {
         <>
             <Header />
             <ListadoPaciente />
+            <Formulario/>
+            <Error/>
+            <Paciente/>
         </>
     )
 }
