@@ -9,8 +9,8 @@ function App() {
     return (
         <div className="container mx-auto mt-15">
             <Header />
-            <ListadoPaciente />
             <Formulario/>
+            <ListadoPaciente />
             <Error/>
             <Paciente/>
         </div>
