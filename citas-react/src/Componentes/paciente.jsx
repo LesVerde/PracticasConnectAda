@@ -1,6 +1,6 @@
 
 function Paciente({paciente, setPaciente, eliminarPaciente}){
-     const {mascota,propietario,email,alta,sintomas} = paciente
+     const {mascota,propietario,email,alta,sintomas,id} = paciente
 
      const eliminarFormulario=()=>{
         const respuesta = confirm('¿Estás seguro de eliminar este paciente?')
@@ -16,7 +16,7 @@ function Paciente({paciente, setPaciente, eliminarPaciente}){
         <p className="font-bold text-gray-700 uppercase ">Alta: <span className="font-normal normal-case">{alta}</span></p>
         <p className="font-bold text-gray-700 uppercase ">Sintomas: <span className="font-normal normal-case">{sintomas}</span></p>
 
-        <div>
+        <div className="flex justify-between mt-8">
             <button type="button" className="bg-indigo-500 text-white font-bold uppercase rounded-md px-10 my-3 hover:bg-indigo-700" 
             onClick={()=>setPaciente(paciente)}>Editar</button>
             <button type="button" className="bg-red-700 text-white font-bold uppercase rounded-md px-10 my-3 hover:bg-red-900" 
