@@ -16,6 +16,10 @@ function Formulario({pacientes, setPacientes, paciente, setPaciente}) {
         return random + fecha;
     }
 
+    
+
+    
+
     const validacionFormulario = (e) => {
         e.preventDefault();
         if ([mascota, propietario, email, alta, sintomas].includes('')) {
@@ -44,6 +48,9 @@ function Formulario({pacientes, setPacientes, paciente, setPaciente}) {
         setSintomas('');
     }
 
+    useEffect(()=>{
+        console.log(paciente)
+    },[paciente])
 
 
     return (
@@ -115,7 +122,7 @@ function Formulario({pacientes, setPacientes, paciente, setPaciente}) {
                         value={sintomas}
                     />
                 </div>
-                <input type="submit" className="bg-indigo-500 text-white font-bold uppercase hover:bg-indigo-700 cursor-pointer transition-colors p-2 rounded-md;" value={paciente.id ? 'Editar Paciente':'Agregar Paciente'} />
+                <input type="submit" className="bg-indigo-500 text-white font-bold uppercase hover:bg-indigo-700 cursor-pointer transition-colors p-2 rounded-md" value={paciente.id ? 'Editar Paciente':'Agregar Paciente'} />
             </form>
 
         

@@ -15,6 +15,7 @@ function App() {
 
     }
 
+
     return (
         <div className="container mx-auto mt-15">
             <Header />
@@ -29,7 +30,7 @@ function App() {
                     pacientes={pacientes}
                     setPaciente={setPaciente}
                     eliminarPaciente = {eliminarPaciente}
-                    
+                   
 
                 />
             </div>
