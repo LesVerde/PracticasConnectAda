@@ -8,6 +8,8 @@ function Paciente({paciente, setPaciente, eliminarPaciente}){
             eliminarPaciente(id)
         }
      }
+
+     
     return(
         <div className="bg-slate-50 shadow-md mx-5 px-5 rounded-md">
         <p className="font-bold text-gray-700 uppercase ">Nombre: <span className="font-normal normal-case">{mascota}</span></p>

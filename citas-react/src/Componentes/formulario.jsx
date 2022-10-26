@@ -16,10 +16,6 @@ function Formulario({pacientes, setPacientes, paciente, setPaciente}) {
         return random + fecha;
     }
 
-    
-
-    
-
     const validacionFormulario = (e) => {
         e.preventDefault();
         if ([mascota, propietario, email, alta, sintomas].includes('')) {
@@ -48,9 +44,18 @@ function Formulario({pacientes, setPacientes, paciente, setPaciente}) {
         setSintomas('');
     }
 
-    useEffect(()=>{
-        console.log(paciente)
-    },[paciente])
+    useEffect(() => {
+        if(Object.keys(paciente).length>0){
+            setMascota(paciente.mascota)
+            setPropietario(paciente.propietario)
+            setEmail(paciente.email)
+            setAlta(paciente.alta)
+            setSintomas(paciente.sintomas)
+        }
+        
+    }, [paciente])
+
+    
 
 
     return (
